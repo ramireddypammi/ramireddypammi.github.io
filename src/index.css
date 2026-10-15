@@ -234,13 +234,6 @@ button:focus-visible {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
 }
 
-.section-heading {
-  background: linear-gradient(120deg, var(--text-primary) 40%, var(--accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), #38bdf8);
 }
@@ -272,3 +265,21 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   :root { scroll-behavior: auto; }
 }
+
+/* Rounded glass cards */
+.skills__grid { gap: 16px; background: none; border: none; }
+.skills__card, .experience__card, .projects__item, .certifications__item {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.skills__card:hover, .projects__item:hover, .certifications__item:hover {
+  border-color: rgba(94, 234, 212, 0.4);
+  transform: translateY(-4px);
+}
+.projects__list { gap: 16px; }
+.projects__item { padding: 32px; border-top: 1px solid var(--border); }
+.projects__item:last-child { border-bottom: 1px solid var(--border); }
+.certifications__list { gap: 16px; }

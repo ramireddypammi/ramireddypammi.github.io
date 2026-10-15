@@ -8,7 +8,13 @@ export const profile = {
   role: "DevOps Engineer",
   tagline: "AWS · DevOps · Cloud · Infrastructure · CI/CD · Monitoring",
   badge: "ASPIRING CLOUD & DEVOPS ENGINEER",
-  headline: ["BUILD.", "AUTOMATE.", "MONITOR."],
+  headline: ["I build,", "automate &", "monitor the cloud."],
+  status: "Open to DevOps & Cloud roles",
+  stats: [
+    { value: "5+", label: "Infra projects" },
+    { value: "30+", label: "Tools & services" },
+    { value: "AWS", label: "Primary cloud" },
+  ],
   intro:
     "I am a Developer",
   subIntro:
