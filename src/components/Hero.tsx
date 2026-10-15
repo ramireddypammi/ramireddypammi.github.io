@@ -1,7 +1,6 @@
 import { ArrowRight, Download } from "lucide-react";
 import { profile, contact } from "../data/portfolio";
 import { RichText } from "../utils/richText";
-import Terminal from "./Terminal";
 import "./Hero.css";
 
 export default function Hero() {
@@ -52,9 +51,6 @@ export default function Hero() {
         <div className="hero__visual rise" style={{ animationDelay: "250ms" }}>
           <div className="hero__photo">
             <img src={profile.photo} alt={profile.name} />
-          </div>
-          <div className="hero__terminal">
-            <Terminal />
           </div>
         </div>
       </div>
