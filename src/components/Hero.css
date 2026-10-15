@@ -68,3 +68,10 @@
   .rise { animation: none; opacity: 1; }
   .hero__marquee-track, .terminal__cursor, .hero__pulse { animation: none; }
 }
+
+.hero__hello { margin: 0 0 14px; font-size: 16px; color: var(--text-secondary); }
+.hero__hello strong { color: var(--text-primary); font-weight: 700; }
+.hero__headline { font-size: clamp(36px, 4.4vw, 62px); text-wrap: balance; }
+.hero__photo { transform: rotate(1.5deg); }
+.hero__terminal { left: -56px; width: 80%; }
+.hero__status { margin-bottom: 22px; }

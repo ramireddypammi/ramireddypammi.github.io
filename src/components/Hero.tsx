@@ -1,4 +1,4 @@
-import { ArrowRight, Download, MapPin } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { profile, contact } from "../data/portfolio";
 import { RichText } from "../utils/richText";
 import Terminal from "./Terminal";
@@ -16,6 +16,10 @@ export default function Hero() {
           <span className="hero__status rise" style={{ animationDelay: "0ms" }}>
             <span className="hero__pulse" /> {profile.status}
           </span>
+
+          <p className="hero__hello rise" style={{ animationDelay: "60ms" }}>
+            Hi, I'm <strong>{profile.name}</strong> · {profile.role}
+          </p>
 
           <h1 className="hero__headline rise" style={{ animationDelay: "100ms" }}>
             {profile.headline[0]} {profile.headline[1]}{" "}
@@ -48,13 +52,6 @@ export default function Hero() {
         <div className="hero__visual rise" style={{ animationDelay: "250ms" }}>
           <div className="hero__photo">
             <img src={profile.photo} alt={profile.name} />
-            <div className="hero__badge">
-              <strong>{profile.name}</strong>
-              <span>{profile.role}</span>
-              <em>
-                <MapPin size={12} /> {profile.location}
-              </em>
-            </div>
           </div>
           <div className="hero__terminal">
             <Terminal />
