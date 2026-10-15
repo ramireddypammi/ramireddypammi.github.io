@@ -1,0 +1,24 @@
+.footer {
+  padding: 32px 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer__inner p {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

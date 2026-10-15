@@ -1,0 +1,112 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar--scrolled {
+  background: rgba(10, 14, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.navbar__logo {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+}
+
+.navbar__logo-mark {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.navbar__links a {
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.navbar__links a:hover,
+.navbar__link--active {
+  color: var(--accent) !important;
+}
+
+.navbar__toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  padding: 4px;
+}
+
+.navbar__mobile {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__mobile {
+    position: fixed;
+    inset: 76px 0 0 0;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .navbar__mobile--open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .navbar__mobile nav {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    gap: 4px;
+  }
+
+  .navbar__mobile a {
+    font-size: 20px;
+    padding: 16px 4px;
+    border-bottom: 1px solid var(--border-soft);
+    color: var(--text-primary);
+  }
+}
