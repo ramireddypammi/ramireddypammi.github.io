@@ -64,3 +64,8 @@
     margin-left: 38px;
   }
 }
+
+.certifications__list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.certifications__item { padding: 24px 28px; }
+.certifications__item:hover { padding-left: 28px; }
+@media (max-width: 760px) { .certifications__list { grid-template-columns: 1fr; } }

@@ -60,3 +60,11 @@
     gap: 12px;
   }
 }
+
+.experience__list { display: flex; flex-direction: column; gap: 20px; }
+.experience__company { margin: 6px 0 4px; color: var(--accent); font-weight: 600; font-size: 15px; }
+.experience__loc { display: flex; align-items: center; gap: 6px; font-size: 12px; margin: 0; }
+.experience__bullets { display: flex; flex-direction: column; gap: 10px; }
+.experience__bullets li { font-size: 14.5px; padding-left: 18px; position: relative; }
+.experience__bullets li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+.experience__header { align-items: flex-start; }

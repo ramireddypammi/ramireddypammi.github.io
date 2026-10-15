@@ -87,3 +87,9 @@
     justify-self: start;
   }
 }
+
+.projects__bullets { display: flex; flex-direction: column; gap: 8px; margin: 0 0 20px; max-width: 720px; }
+.projects__bullets li { font-size: 14.5px; padding-left: 18px; position: relative; }
+.projects__bullets li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+.projects__item { grid-template-columns: 72px 1fr; }
+@media (max-width: 640px) { .projects__item { grid-template-columns: 1fr; } }

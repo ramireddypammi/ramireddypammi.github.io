@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { skillGroups, allTechnologies } from "../data/portfolio";
+import { skills } from "../data/portfolio";
 import { spotlight } from "../hooks";
 import SectionHeading from "./SectionHeading";
 import "./Skills.css";
@@ -8,10 +8,10 @@ export default function Skills() {
   return (
     <section id="skills" className="section skills" aria-label="Skills">
       <div className="container">
-        <SectionHeading eyebrow="02 / SKILLS" heading="Tools I use to build and ship reliably." />
+        <SectionHeading eyebrow={skills.eyebrow} heading={skills.heading} />
 
         <div className="skills__grid">
-          {skillGroups.map((group, i) => (
+          {skills.groups.map((group, i) => (
             <motion.div
               key={group.name}
               className="skills__card"
@@ -32,16 +32,6 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="skills__all">
-          <span className="mono skills__all-label muted">TECHNOLOGIES</span>
-          <div className="skills__all-list">
-            {allTechnologies.map((tech) => (
-              <span key={tech} className="mono skills__pill">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

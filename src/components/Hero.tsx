@@ -17,9 +17,14 @@ export default function Hero() {
             <span className="hero__pulse" /> {profile.status}
           </span>
 
-          <p className="hero__hello mono rise" style={{ animationDelay: "80ms" }}>
-            Hi, I'm <strong>{profile.name}</strong> — {profile.role}
-          </p>
+          <div className="hero__hello rise" style={{ animationDelay: "80ms" }}>
+            <img className="hero__avatar" src={profile.photo} alt={profile.name} />
+            <p className="mono">
+              Hi, I'm <strong>{profile.name}</strong>
+              <br />
+              <span>{profile.role}</span>
+            </p>
+          </div>
 
           <h1 className="hero__headline rise" style={{ animationDelay: "160ms" }}>
             {profile.headline[0]} {profile.headline[1]}{" "}

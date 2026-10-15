@@ -19,12 +19,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <div className="about__portrait-frame">
-              <div className="about__portrait-placeholder mono">
-                {profile.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")}
-              </div>
+              <img src={profile.photo} alt={profile.name} className="about__photo" />
             </div>
             <p className="mono about__portrait-caption">
               <strong>{profile.name}</strong>

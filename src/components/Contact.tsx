@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, FileDown } from "lucide-react";
+import { Linkedin, Mail, Phone, FileDown } from "lucide-react";
 import { contact } from "../data/portfolio";
 import { RichText } from "../utils/richText";
 import "./Contact.css";
@@ -56,7 +56,7 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <a
-            href={`mailto:${contact.email}`.replace("mailto:[ADD EMAIL]", "#")}
+            href={`mailto:${contact.email}`}
             className="btn btn-primary"
           >
             <Mail size={16} /> EMAIL ME
@@ -66,12 +66,19 @@ export default function Contact() {
           </a>
         </motion.div>
 
+        <p className="mono muted contact__details">
+          {contact.email} · {contact.phone}
+        </p>
+
         <div className="contact__social">
-          <a href={contact.github} aria-label="GitHub profile" className="contact__social-link">
-            <Github size={20} />
-          </a>
-          <a href={contact.linkedin} aria-label="LinkedIn profile" className="contact__social-link">
+          <a href={contact.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn profile" className="contact__social-link">
             <Linkedin size={20} />
+          </a>
+          <a href={`mailto:${contact.email}`} aria-label="Email" className="contact__social-link">
+            <Mail size={20} />
+          </a>
+          <a href={`tel:${contact.phone}`} aria-label="Call" className="contact__social-link">
+            <Phone size={20} />
           </a>
         </div>
       </div>

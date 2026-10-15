@@ -209,3 +209,13 @@
 .hero__headline { text-wrap: balance; font-size: clamp(38px, 4.8vw, 66px); }
 .hero { padding-top: 90px; }
 .hero__inner { padding-top: 24px; padding-bottom: 56px; }
+
+.hero__hello { display: flex; align-items: center; gap: 16px; margin: 0 0 20px; }
+.hero__hello p { margin: 0; font-size: 14px; line-height: 1.5; }
+.hero__hello span { color: var(--accent); }
+.hero__avatar {
+  width: 64px; height: 64px; border-radius: 50%;
+  object-fit: cover; object-position: 50% 14%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.15);
+}

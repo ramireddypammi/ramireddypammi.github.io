@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { certifications } from "../data/portfolio";
 import SectionHeading from "./SectionHeading";
 import "./Certifications.css";
@@ -12,9 +11,8 @@ export default function Certifications() {
 
         <div className="certifications__list">
           {certifications.items.map((cert, i) => (
-            <motion.a
+            <motion.div
               key={cert.title}
-              href={cert.link}
               className="certifications__item"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -26,10 +24,7 @@ export default function Certifications() {
                 <h3>{cert.title}</h3>
                 <p className="muted">{cert.issuer}</p>
               </div>
-              <span className="mono certifications__link">
-                View <ArrowUpRight size={14} />
-              </span>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>
