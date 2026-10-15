@@ -54,7 +54,7 @@ export default function Navbar() {
             handleNavClick("#home");
           }}
         >
-          <span className="navbar__logo-mark">◆</span> {profile.name.split(" ")[0]}
+          <span className="navbar__logo-mark">RRP</span> {profile.name.split(" ")[0]}
         </a>
 
         <nav className="navbar__links" aria-label="Primary">

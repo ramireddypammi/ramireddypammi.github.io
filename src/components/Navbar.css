@@ -31,3 +31,9 @@
   .navbar__mobile a { font-family: var(--sans); font-size: 17px; font-weight: 600; padding: 14px 16px; border-radius: 14px; }
   .navbar__mobile a:hover { background: var(--bg); }
 }
+
+.navbar__logo-mark {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--warm));
+  padding: 5px 10px; border-radius: 999px;
+}
