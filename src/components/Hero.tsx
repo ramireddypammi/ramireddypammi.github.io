@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { profile } from "../data/portfolio";
 import { RichText } from "../utils/richText";
+import Terminal from "./Terminal";
 import "./Hero.css";
 
 export default function Hero() {
@@ -12,6 +13,7 @@ export default function Hero() {
   return (
     <section id="home" className="hero" aria-label="Introduction">
       <div className="container hero__inner">
+        <div className="hero__copy">
         <motion.span
           className="eyebrow mono hero__badge"
           initial={{ opacity: 0, y: 16 }}
@@ -64,6 +66,16 @@ export default function Hero() {
           <button className="btn btn-ghost" onClick={() => scrollTo("#about")}>
             MORE ABOUT ME
           </button>
+        </motion.div>
+        </div>
+
+        <motion.div
+          className="hero__visual"
+          initial={{ opacity: 0, y: 24, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          <Terminal />
         </motion.div>
       </div>
 

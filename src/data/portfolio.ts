@@ -222,3 +222,16 @@ export const nav = [
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
+
+export const terminal = {
+  title: "pipeline — main",
+  lines: [
+    { kind: "cmd", text: "terraform apply -auto-approve" },
+    { kind: "ok", text: "VPC, ECS cluster, ALB provisioned" },
+    { kind: "cmd", text: "docker build && docker push ecr" },
+    { kind: "ok", text: "image pushed to Amazon ECR" },
+    { kind: "cmd", text: "gh workflow run deploy.yml" },
+    { kind: "ok", text: "ECS service updated · 0 downtime" },
+    { kind: "ok", text: "Grafana dashboards healthy · alerts armed" },
+  ],
+};

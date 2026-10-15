@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { experience } from "../data/portfolio";
+import { spotlight } from "../hooks";
 import SectionHeading from "./SectionHeading";
 import "./Experience.css";
 
@@ -11,6 +12,7 @@ export default function Experience() {
 
         <motion.div
           className="experience__card"
+          onMouseMove={spotlight}
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}

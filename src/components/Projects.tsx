@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "../data/portfolio";
+import { spotlight } from "../hooks";
 import SectionHeading from "./SectionHeading";
 import "./Projects.css";
 
@@ -15,6 +16,7 @@ export default function Projects() {
             <motion.article
               key={project.index}
               className="projects__item"
+              onMouseMove={spotlight}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}

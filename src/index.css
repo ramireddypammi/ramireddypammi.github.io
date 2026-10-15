@@ -200,3 +200,75 @@ button:focus-visible {
     margin-bottom: 40px;
   }
 }
+
+/* ==========================================================================
+   Modern UI layer: ambient glow, scroll progress, spotlight cards
+   ========================================================================== */
+:root {
+  --accent-2: #818cf8;
+  --glass: rgba(16, 22, 31, 0.6);
+}
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 400px at 12% 8%, rgba(94, 234, 212, 0.1), transparent 70%),
+    radial-gradient(700px 500px at 90% 30%, rgba(129, 140, 248, 0.09), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px) 0 0 / 56px 56px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 200;
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.section-heading {
+  background: linear-gradient(120deg, var(--text-primary) 40%, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #38bdf8);
+}
+
+/* Cursor-following spotlight shared by cards */
+.skills__card,
+.projects__item,
+.experience__card {
+  position: relative;
+  overflow: hidden;
+}
+.skills__card::after,
+.projects__item::after,
+.experience__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(94, 234, 212, 0.1), transparent 70%);
+}
+.skills__card:hover::after,
+.projects__item:hover::after,
+.experience__card:hover::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+}

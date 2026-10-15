@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { skillGroups, allTechnologies } from "../data/portfolio";
+import { spotlight } from "../hooks";
 import SectionHeading from "./SectionHeading";
 import "./Skills.css";
 
@@ -14,6 +15,7 @@ export default function Skills() {
             <motion.div
               key={group.name}
               className="skills__card"
+              onMouseMove={spotlight}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
