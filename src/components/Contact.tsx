@@ -7,7 +7,8 @@ import "./Contact.css";
 export default function Contact() {
   return (
     <section id="contact" className="section contact" aria-label="Contact">
-      <div className="container contact__inner">
+      <div className="container">
+      <div className="contact__inner">
         <motion.span
           className="eyebrow mono"
           initial={{ opacity: 0, y: 16 }}
@@ -81,6 +82,7 @@ export default function Contact() {
             <Phone size={20} />
           </a>
         </div>
+      </div>
       </div>
     </section>
   );
