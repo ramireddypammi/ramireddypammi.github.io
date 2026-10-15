@@ -7,11 +7,14 @@ import Certifications from "./components/Certifications";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import ScrollProgress from "./components/ScrollProgress";
 import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <>
+      <ScrollProgress />
+      <div className="ambient" aria-hidden="true" />
       <Navbar />
       <main>
         <Hero />

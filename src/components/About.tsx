@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { about, profile } from "../data/portfolio";
+import { about } from "../data/portfolio";
 import { RichText } from "../utils/richText";
+import Terminal from "./Terminal";
 import SectionHeading from "./SectionHeading";
 import "./About.css";
 
@@ -18,19 +19,9 @@ export default function About() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
           >
-            <div className="about__portrait-frame">
-              <div className="about__portrait-placeholder mono">
-                {profile.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")}
-              </div>
+            <div className="about__terminal">
+              <Terminal />
             </div>
-            <p className="mono about__portrait-caption">
-              <strong>{profile.name}</strong>
-              <br />
-              {profile.role}
-            </p>
           </motion.div>
 
           <motion.div

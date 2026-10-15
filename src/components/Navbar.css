@@ -1,112 +1,39 @@
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: transparent;
-  border-bottom: 1px solid transparent;
-  transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-.navbar--scrolled {
-  background: rgba(10, 14, 20, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-soft);
-}
-
+.navbar { position: fixed; top: 14px; left: 0; right: 0; z-index: 100; padding: 0 16px; }
 .navbar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 76px;
+  max-width: 1100px; margin: 0 auto; padding: 0 12px 0 24px; height: 62px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(16px);
+  border: 1px solid var(--border-soft); border-radius: 999px; box-shadow: var(--shadow);
 }
+.navbar .container { padding: 0 12px 0 24px; max-width: 1100px; }
+.navbar__logo { font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.navbar__logo-mark { color: var(--warm); font-size: 12px; }
+.navbar__links { display: flex; align-items: center; gap: 4px; }
+.navbar__links a {
+  font-family: var(--sans); font-size: 13.5px; font-weight: 500; color: var(--text-secondary);
+  padding: 9px 14px; border-radius: 999px; transition: background 0.2s ease, color 0.2s ease;
+}
+.navbar__links a:hover { background: var(--bg); color: var(--text-primary); }
+.navbar__links a.navbar__link--active { background: var(--ink); color: #fff !important; }
+.navbar__toggle { display: none; background: transparent; border: none; color: var(--text-primary); padding: 8px; }
+.navbar__mobile { display: none; }
 
-.navbar__logo {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-primary);
+@media (max-width: 960px) {
+  .navbar__links { display: none; }
+  .navbar__toggle { display: flex; }
+  .navbar__mobile {
+    display: flex; position: fixed; inset: 86px 16px auto 16px; background: var(--surface);
+    border: 1px solid var(--border-soft); border-radius: 24px; box-shadow: var(--shadow-lg);
+    opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .navbar__mobile--open { opacity: 1; transform: none; pointer-events: auto; }
+  .navbar__mobile nav { display: flex; flex-direction: column; padding: 12px; width: 100%; }
+  .navbar__mobile a { font-family: var(--sans); font-size: 17px; font-weight: 600; padding: 14px 16px; border-radius: 14px; }
+  .navbar__mobile a:hover { background: var(--bg); }
 }
 
 .navbar__logo-mark {
-  color: var(--accent);
-  font-size: 12px;
-}
-
-.navbar__links {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-}
-
-.navbar__links a {
-  font-size: 13px;
-  color: var(--text-secondary);
-  letter-spacing: 0.03em;
-  position: relative;
-  padding: 4px 0;
-  transition: color 0.2s ease;
-}
-
-.navbar__links a:hover,
-.navbar__link--active {
-  color: var(--accent) !important;
-}
-
-.navbar__toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: var(--text-primary);
-  padding: 4px;
-}
-
-.navbar__mobile {
-  display: none;
-}
-
-@media (max-width: 860px) {
-  .navbar__links {
-    display: none;
-  }
-
-  .navbar__toggle {
-    display: flex;
-  }
-
-  .navbar__mobile {
-    position: fixed;
-    inset: 76px 0 0 0;
-    background: var(--bg);
-    display: flex;
-    flex-direction: column;
-    transform: translateY(-8px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-  }
-
-  .navbar__mobile--open {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .navbar__mobile nav {
-    display: flex;
-    flex-direction: column;
-    padding: 32px 24px;
-    gap: 4px;
-  }
-
-  .navbar__mobile a {
-    font-size: 20px;
-    padding: 16px 4px;
-    border-bottom: 1px solid var(--border-soft);
-    color: var(--text-primary);
-  }
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--warm));
+  padding: 5px 10px; border-radius: 999px;
 }
