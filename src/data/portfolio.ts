@@ -183,11 +183,11 @@ export const education = {
   heading: "Where the journey started.",
   items: [
     {
-      period: "CGPA 7.1",
+      period: "Passed out 2023",
       degree: "B.Tech",
       field: "Information Technology",
       institution: "Pace Institute Of Technology And Sciences",
-      description: "",
+      description: "CGPA: 7.1",
     },
   ],
 };
