@@ -199,7 +199,7 @@ export const contact = {
   body:
     "Passionate about **AWS, DevOps & Cloud Automation** and building scalable, reliable systems. Open to opportunities and conversations about cloud & DevOps engineering.",
   closingLine: "Build boldly. Automate relentlessly. Monitor continuously.",
-  linkedin: "https://linkedin.com/in/ramireddy-pammi127/",
+  linkedin: "https://www.linkedin.com/in/ramireddy-pammi127/",
   email: "pammiramireddy2002@gmail.com",
   phone: "06281217515",
   resume: "/resume/Ramireddy_Pammi_Resume.pdf",
