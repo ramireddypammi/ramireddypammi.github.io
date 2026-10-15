@@ -8,3 +8,8 @@
 .projects__tech { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .projects__tech li { font-size: 11.5px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--ink); color: #fff; }
 @media (max-width: 900px) { .projects__list { grid-template-columns: 1fr; } .projects__item { padding: 26px; } }
+
+@media (max-width: 560px) {
+  .projects__index { font-size: 44px; top: 14px; right: 18px; }
+  .projects__title { font-size: 19px; padding-right: 48px; }
+}
